@@ -23,3 +23,8 @@ The work was done using linux , but you can run this code on windows or in MacOS
 # Tips
 Be carefull to the paths defined in the scripts , you need to change paths and make them adapted based on your machine and files directories.
 
+# Usefull Links 
+
+Point cloud library : https://pointclouds.org
+OpenCV: https://opencv.org/
+ 
