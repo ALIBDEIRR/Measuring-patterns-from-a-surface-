@@ -34,7 +34,7 @@ Point cloud library : https://pointclouds.org
 OpenCV: https://opencv.org/
 
 
- # Refernces 
+ # References 
  
 @phdthesis{kudryavtsev20173d,  
   title={3D Reconstruction in Scanning Electron Microscope: from image acquisition to dense point cloud},  
