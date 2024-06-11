@@ -32,4 +32,14 @@ Be carefull to the paths defined in the scripts , you need to change paths and m
 Point cloud library : https://pointclouds.org   
 
 OpenCV: https://opencv.org/
+
+
+ # Refernces 
+ 
+@phdthesis{kudryavtsev20173d,
+  title={3D Reconstruction in Scanning Electron Microscope: from image acquisition to dense point cloud},
+  author={Kudryavtsev, Andrey},
+  year={2017},
+  school={University of Bourgogne Franche-Comt{\'e}}
+}
  
