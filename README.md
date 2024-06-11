@@ -6,10 +6,12 @@ The core of the work is to develope a C++ application for measuring patterns fro
       		
 # File contents
 
-source file: Includes the main script of the c++ code (main.cpp) and the other functions.*******          
-py scripts : Includes the python code for creating virtual point clouds.********
-images: give an examples of the approach developed through the code.********
-headers: Includes the header files included in the main script (main.cpp).********
+source file: Includes the main script of the c++ code (main.cpp) and the other functions.  
+
+py scripts : Includes the python code for creating virtual point clouds.   
+
+images: give an examples of the approach developed through the code.   
+headers: Includes the header files included in the main script (main.cpp).    
 
 
 # How the code works
@@ -25,6 +27,7 @@ Be carefull to the paths defined in the scripts , you need to change paths and m
 
 # Usefull Links 
 
-Point cloud library : https://pointclouds.org
+Point cloud library : https://pointclouds.org   
+
 OpenCV: https://opencv.org/
  
