@@ -17,7 +17,7 @@ The code reads a point cloud data from a .pcd file (only) , visulaize this data 
 then the code implement an algorithm to try to fit the point cloud with a sphere if possible and execute its parameters. At the end the code visualize the results and the radius of the fitted sphere is printed to the terminal.
 
 # Operating system
-Thw work was done using linux , but you can run this code on windows or in MacOS.
+The work was done using linux , but you can run this code on windows or in MacOS.
 
 
 # Tips
