@@ -40,7 +40,7 @@ char confirmation;
 float noiseamplitude;
 
 vector<double> distances;
-
+vector<double> dist;
 //------------------------------------------------------------------Main function -------ransac.setDistanceThreshold(threshold)--------------------------------------------------------------
 int main() {
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
@@ -100,6 +100,7 @@ int main() {
     for (size_t i = 0; i < cloud->size(); ++i) {
         pcl::PointXYZ point = cloud->points[i];
         float distance = sqrt(pow(point.x - center.x, 2) + pow(point.y - center.y, 2) + pow(point.z - center.z, 2));
+        
         if (abs(distance - radius) < threshold) {
             intersection_cloud->points.push_back(point);
         }
@@ -107,9 +108,7 @@ int main() {
     cout << "-----------------------------------------------------------------------------"<< endl;
     cout << "Threshold value of filtering: "<< threshold << endl; 
     cout << "-----------------------------------------------------------------------------"<< endl;
-    cout << "The number of points fitted by the sphere is : " << intersection_cloud->size() << " data points. " << endl;
-     
- 
+    cout << "The number of points fitted by the sphere is : " << intersection_cloud->size() << " data points. " << endl;    
     std::ofstream csvfile;
     csvfile.open("/home/ali.bdeir/Desktop/half_sphere_dimensions/csv files/distances.csv");
     csvfile << "PointIndex,Distance\n"; 
@@ -127,6 +126,18 @@ int main() {
     cout << "---------------------------------------------------------------------------- "<<endl;
     cout << "Fitting accuaracy : "<<  abs(root_mean_square(distances) - radius) << endl;
     cout << "-----------------------------------------------------------------------------"<<endl;
+    
+    
+    csvfile.open("/home/ali.bdeir/Desktop/half_sphere_dimensions/csv files/distances_t.csv");
+    csvfile << "PointIndex,t\n"; 
+    for (size_t i = 0; i < intersection_cloud->size(); ++i) {
+        pcl::PointXYZ point = intersection_cloud->points[i];
+        float distance1= sqrt(pow(point.x - center.x, 2) + pow(point.y - center.y, 2) + pow(point.z - center.z, 2));
+        float t = distance1-radius;
+        int j = i +1;
+        csvfile << j << "," << t << "\n";
+    }    
+    csvfile.close();
 // ------------------------------------------Visualize the point cloud with different colors------------------------------------------------------------------------
     boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer(new pcl::visualization::PCLVisualizer("Sphere fitting"));
     pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> color_handler(cloud, 255, 255, 255); 
