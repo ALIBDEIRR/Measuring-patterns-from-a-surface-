@@ -32,7 +32,8 @@ Be carefull to the paths defined in the scripts , you need to change paths and m
 git clone https://github.com/ALIBDEIRR/Measuring-patterns-from-a-surface-.git   
 
 
-cd Measuring-patterns-from-a-surface- 
+cd Measuring-patterns-from-a-surface-   
+
 mkdir build && cd build  
 cmake ..  
 make   
