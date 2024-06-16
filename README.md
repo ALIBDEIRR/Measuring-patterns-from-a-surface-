@@ -29,7 +29,8 @@ The work was done using linux , but you can run this code on windows or in MacOS
 Be carefull to the paths defined in the scripts , you need to change paths and make them adapted based on your machine and files directories.
 
 # Running the code
-git clone https://github.com/ALIBDEIRR/Measuring-patterns-from-a-surface-.git  
+git clone https://github.com/ALIBDEIRR/Measuring-patterns-from-a-surface-.git   
+
 
 cd Measuring-patterns-from-a-surface- 
 mkdir build && cd build  
